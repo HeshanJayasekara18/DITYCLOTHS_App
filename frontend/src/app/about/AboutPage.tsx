@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from 'react';
-import { Menu, X, CheckCircle2, Heart, Leaf, Users, Award, Sparkles } from 'lucide-react';
+import { Heart, Leaf, Users, Award, Sparkles } from 'lucide-react';
 import Navbar from '../common/Navbar';
 
 
@@ -91,13 +90,13 @@ const AboutPage = () => {
               </h2>
               <div className="flex flex-col gap-4 text-sm leading-relaxed text-[#213b2e] sm:text-base">
                 <p>
-                  Founded with a passion for providing exceptional laundry care, DIRTYCLOTHS has been serving the community with dedication and expertise. We understand that your clothes are more than just fabric—they're an investment and a reflection of your personal style.
+                  Founded with a passion for providing exceptional laundry care, DIRTYCLOTHS has been serving the community with dedication and expertise. We understand that your clothes are more than just fabric—they&apos;re an investment and a reflection of your personal style.
                 </p>
                 <p>
-                  Over the years, we've built our reputation on quality service, attention to detail, and a genuine commitment to our customers. Our state-of-the-art facilities combined with eco-friendly practices ensure that your garments receive the best care possible while protecting the environment.
+                  Over the years, we&apos;ve built our reputation on quality service, attention to detail, and a genuine commitment to our customers. Our state-of-the-art facilities combined with eco-friendly practices ensure that your garments receive the best care possible while protecting the environment.
                 </p>
                 <p>
-                  What started as a small local laundry service has grown into a trusted name in the industry. We've expanded our services, upgraded our technology, but our core values remain the same: quality, reliability, and customer satisfaction.
+                  What started as a small local laundry service has grown into a trusted name in the industry. We&apos;ve expanded our services, upgraded our technology, but our core values remain the same: quality, reliability, and customer satisfaction.
                 </p>
               </div>
             </div>
