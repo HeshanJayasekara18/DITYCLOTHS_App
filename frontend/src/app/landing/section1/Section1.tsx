@@ -34,7 +34,7 @@ const Section1 = () => {
               Discover our top-notch laundry services, where we combine eco-friendly practices, cutting-edge technology, and a commitment to delivering exceptional results.
             </p>
             
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-0 sm:flex-row sm:items-center sm:gap-4">
               <a
                 className="inline-flex items-center justify-center rounded-full bg-[#0f351e] px-8 py-3 text-sm font-semibold text-white shadow-[0_22px_48px_rgba(15,53,30,0.32)] transition hover:bg-[#0c2815] sm:px-9"
                 href="#learn-more"

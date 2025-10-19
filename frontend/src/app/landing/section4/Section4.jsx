@@ -6,7 +6,7 @@ const Section4 = () => {
     lat: 5.96545,
     lng: 80.39445,
     address: "Amuwatta Koratuwa, Midigama, Southern Province, Sri Lanka",
-    phone: "+94 76 3290 630",
+    phone: "+94 72 1634 671",
     email: "info@dirtycloths.com",
     hours: "Anytime"
   };
