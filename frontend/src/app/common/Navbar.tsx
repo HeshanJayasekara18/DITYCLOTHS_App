@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Send } from 'lucide-react';
+import dcIcon from '@/app/assert/images/DCicon.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,10 +51,15 @@ const Navbar = () => {
       <header className="relative z-50 flex items-center justify-between text-sm font-medium text-[#0f2716]">
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
-            className="grid h-10 w-10 place-items-center rounded-full border border-[#0f2716]/30 text-base font-semibold tracking-wide sm:h-11 sm:w-11 sm:text-lg"
+            className="grid h-10 w-10 place-items-center rounded-full border border-[#0f2716]/30 bg-white/90 p-1.5 sm:h-11 sm:w-11"
             href="/"
           >
-            DC
+            <Image
+              src={dcIcon}
+              alt="DIRTYCLOTHS logo"
+              className="h-full w-full object-contain"
+              priority
+            />
           </Link>
           <Link className="text-base font-semibold sm:text-lg" href="/">
             DIRTYCLOTHS
