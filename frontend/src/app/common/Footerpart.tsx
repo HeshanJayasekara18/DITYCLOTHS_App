@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footerpart = () => {
@@ -18,7 +19,9 @@ const Footerpart = () => {
               <div className="grid h-12 w-12 place-items-center rounded-full border-2 border-white/30 text-lg font-semibold">
                 DC
               </div>
-              <span className="text-xl font-semibold">DIRTYCLOTHS</span>
+              <Link href="/" className="text-xl font-semibold transition hover:text-white/80">
+                DIRTYCLOTHS
+              </Link>
             </div>
             <p className="text-sm leading-relaxed text-white/70">
               Your trusted partner for premium laundry services with eco-friendly practices and exceptional care.
@@ -53,18 +56,18 @@ const Footerpart = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <nav className="flex flex-col gap-2.5">
-              <a href="/home" className="text-sm text-white/70 transition-colors hover:text-white">
+              <Link href="/" className="text-sm text-white/70 transition-colors hover:text-white">
                 Home
-              </a>
-              <a href="/about" className="text-sm text-white/70 transition-colors hover:text-white">
+              </Link>
+              <Link href="/about" className="text-sm text-white/70 transition-colors hover:text-white">
                 About Us
-              </a>
-              <a href="/services" className="text-sm text-white/70 transition-colors hover:text-white">
+              </Link>
+              <Link href="/services" className="text-sm text-white/70 transition-colors hover:text-white">
                 Services
-              </a>
-              <a href="/contact" className="text-sm text-white/70 transition-colors hover:text-white">
+              </Link>
+              <Link href="/contact" className="text-sm text-white/70 transition-colors hover:text-white">
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -92,18 +95,18 @@ const Footerpart = () => {
             <h3 className="text-lg font-semibold">Get in Touch</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+94763290630"
+                href="tel:+94721634671"
                 className="flex items-start gap-3 text-sm text-white/70 transition-colors hover:text-white"
               >
                 <Phone size={18} className="mt-0.5 shrink-0" />
-                <span>+94 76 3290 630</span>
+                <span>+94 72 1634 671</span>
               </a>
               <a
-                href="mailto:info@dirtycloths.com"
+                href="mailto:dirtycloths.midigama@gmail.com"
                 className="flex items-start gap-3 text-sm text-white/70 transition-colors hover:text-white"
               >
                 <Mail size={18} className="mt-0.5 shrink-0" />
-                <span>info@dirtycloths.com</span>
+                <span>dirtycloths.midigama@gmail.com</span>
               </a>
               <div className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin size={18} className="mt-0.5 shrink-0" />

@@ -2,11 +2,26 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Send } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+
+  const desktopLinkClass = (href: string) =>
+    `transition-colors hover:text-[#114633] ${isActive(href) ? 'text-[#0f351e] underline decoration-2 underline-offset-8' : ''}`;
+
+  const mobileLinkClass = (href: string) =>
+    `rounded-lg px-4 py-3 transition-colors hover:bg-[#d7e6d4]/50 ${isActive(href) ? 'bg-[#d7e6d4]/60 font-semibold text-[#0f351e]' : ''}`;
 
   const openChat = () => {
     setIsChatOpen(true);
@@ -46,16 +61,16 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 lg:gap-10 md:flex">
-          <Link className="transition-colors hover:text-[#114633]" href="/">
+          <Link className={desktopLinkClass('/')} href="/">
             Home
           </Link>
-          <Link className="transition-colors hover:text-[#114633]" href="/about">
+          <Link className={desktopLinkClass('/about')} href="/about">
             About
           </Link>
-          <Link className="transition-colors hover:text-[#114633]" href="/services">
+          <Link className={desktopLinkClass('/services')} href="/services">
             Services
           </Link>
-          <Link className="transition-colors hover:text-[#114633]" href="/contact">
+          <Link className={desktopLinkClass('/contact')} href="/contact">
             Contact
           </Link>
         </nav>
@@ -84,28 +99,28 @@ const Navbar = () => {
           <div className="absolute left-0 right-0 top-full mt-2 rounded-2xl border border-[#0f2716]/20 bg-white/95 p-4 shadow-xl backdrop-blur-sm md:hidden">
             <nav className="flex flex-col gap-3">
               <Link
-                className="rounded-lg px-4 py-3 transition-colors hover:bg-[#d7e6d4]/50"
+                className={mobileLinkClass('/')}
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
-                className="rounded-lg px-4 py-3 transition-colors hover:bg-[#d7e6d4]/50"
+                className={mobileLinkClass('/about')}
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
-                className="rounded-lg px-4 py-3 transition-colors hover:bg-[#d7e6d4]/50"
+                className={mobileLinkClass('/services')}
                 href="/services"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
-                className="rounded-lg px-4 py-3 transition-colors hover:bg-[#d7e6d4]/50"
+                className={mobileLinkClass('/contact')}
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
               >
