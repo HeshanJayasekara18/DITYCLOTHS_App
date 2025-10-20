@@ -1,5 +1,6 @@
 import Navbar from "@/app/common/Navbar";
 import headerImage from "@/app/assert/images/headerimg.png";
+import dirtyClothsBoard from "@/app/assert/images/dirtyclothsboard.png";
 
 const Section1 = () => {
   return (
@@ -47,6 +48,14 @@ const Section1 = () => {
               >
                 Book Now
               </a>
+            </div>
+            <div className="relative mt-6 flex justify-center sm:hidden">
+              <img
+                src={dirtyClothsBoard.src}
+                alt="DIRTYCLOTHS welcome board"
+                className="h-100 w-120 rounded-2xl border border-[#0f351e]/10 shadow-[0_18px_40px_rgba(11,34,20,0.16)]"
+              />
+              <span className="pointer-events-none absolute inset-0 rounded-2xl bg-[rgba(215,230,212,0.208)]" />
             </div>
           </div>
           
