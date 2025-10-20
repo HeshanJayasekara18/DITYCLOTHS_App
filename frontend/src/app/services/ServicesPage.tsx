@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle } from 'lucide-react';
+import { Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle } from 'lucide-react';
 import Navbar from '@/app/common/Navbar';
 
 
@@ -269,7 +269,7 @@ const ServicesPage = () => {
                 Visiting Midigama?
               </h2>
               <p className="mx-auto max-w-xl text-sm text-[#213b2e] sm:text-base">
-                Drop off your laundry and enjoy your vacation worry-free. We'll have your clothes fresh and ready!
+                Drop off your laundry and enjoy your vacation worry-free. We&apos;ll have your clothes fresh and ready!
               </p>
               <div className="mx-auto mt-2 inline-flex items-center gap-2 text-sm text-[#0f351e]">
                 <span className="text-xl">🌊</span>

@@ -170,12 +170,12 @@ const Navbar = () => {
             <div className="flex flex-col gap-4 px-6 py-6">
               <div className="flex flex-col gap-3">
                 <div className="self-start rounded-2xl bg-[#d7e6d4] px-4 py-3 text-sm text-[#0f351e]">
-                  Hi there! I'm your DIRTYCLOTHS virtual assistant. How can I help you today?
+                  Hi there! I&apos;m your DIRTYCLOTHS virtual assistant. How can I help you today?
                 </div>
                 <div className="self-start rounded-2xl bg-white px-4 py-3 text-sm text-[#213b2e] shadow-[0_10px_24px_rgba(11,34,20,0.12)]">
                   Popular questions:
                   <ul className="mt-2 space-y-1 text-left text-xs text-[#0f351e]">
-                    <li>• What are your wash & fold rates?</li>
+                    <li>• What are your wash &amp; fold rates?</li>
                     <li>• How fast is the turnaround?</li>
                     <li>• Where is the shop located?</li>
                   </ul>
