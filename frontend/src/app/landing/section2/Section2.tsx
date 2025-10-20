@@ -18,7 +18,7 @@ const Section2 = () => {
       icon: Wind,
       title: "Express Service",
       description: "Fast turnaround for those urgent laundry needs without compromising quality.",
-      features: ["Same-day service", "Quick processing", "Rush handling"]
+      features: ["24h service", "Quick processing", "Rush handling"]
     },
     {
       icon: Clock,
