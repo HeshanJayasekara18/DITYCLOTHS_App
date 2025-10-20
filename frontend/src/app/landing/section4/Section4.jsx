@@ -1,13 +1,16 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+'use client';
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, X } from 'lucide-react';
 
 const Section4 = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   // Business coordinates and details
   const businessLocation = {
     lat: 5.96545,
     lng: 80.39445,
     address: "Amuwatta Koratuwa, Midigama, Southern Province, Sri Lanka",
     phone: "+94 72 1634 671",
-    email: "info@dirtycloths.com",
+    email: "dirtycloths.midigama@gmail.com",
     hours: "Anytime"
   };
 
@@ -100,14 +103,13 @@ const Section4 = () => {
                 Get Directions
               </a>
 
-              <a
+              <button
+                type="button"
                 className="inline-flex items-center justify-center rounded-full bg-[#149146] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_22px_48px_rgba(20,145,70,0.32)] transition hover:bg-[#0f6b33]"
-                href="#video"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => setIsVideoModalOpen(true)}
               >
                 Video Directions
-              </a>
+              </button>
             </div>
           </div>
 
@@ -127,6 +129,47 @@ const Section4 = () => {
           </div>
         </div>
       </div>
+      {isVideoModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={() => setIsVideoModalOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="video-coming-soon-title"
+        >
+          <div
+            className="mx-4 w-full max-w-md rounded-3xl bg-white p-8 text-center shadow-[0_32px_80px_rgba(11,34,20,0.3)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="ml-auto flex h-9 w-9 items-center justify-center rounded-full border border-[#0f2716]/15 text-[#0f2716] transition hover:bg-[#f3f7f0]"
+              onClick={() => setIsVideoModalOpen(false)}
+            >
+              <span className="sr-only">Close</span>
+              <X size={18} />
+            </button>
+            <div className="mt-4 flex flex-col gap-3">
+              <h3 id="video-coming-soon-title" className="text-xl font-semibold text-[#06150b]">
+                Video directions coming soon
+              </h3>
+              <p className="text-sm leading-relaxed text-[#213b2e]">
+                We are recording a guided walkthrough of the route to our shop. Check back shortly to watch the full video experience.
+              </p>
+              <div className="rounded-full bg-[#d7e6d4] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1b3f26]/80">
+                Coming Soon
+              </div>
+              <button
+                type="button"
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-[#0f351e] px-6 py-2.5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,53,30,0.28)] transition hover:bg-[#0c2815]"
+                onClick={() => setIsVideoModalOpen(false)}
+              >
+                Back to site
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
