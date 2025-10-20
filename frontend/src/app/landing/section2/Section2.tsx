@@ -108,13 +108,13 @@ const Section2 = () => {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <a
               className="inline-flex items-center justify-center rounded-full bg-[#0f351e] px-8 py-3 text-sm font-semibold text-white shadow-[0_22px_48px_rgba(15,53,30,0.32)] transition hover:bg-[#0c2815] sm:px-9"
-              href="#get-started"
+              href="#section4"
             >
               Get Started
             </a>
             <a
               className="inline-flex items-center justify-center rounded-full border border-[#0f351e]/30 bg-white px-8 py-3 text-sm font-semibold text-[#0f351e] shadow-[0_18px_40px_rgba(255,255,255,0.55)] transition hover:bg-[#f3f7f0] sm:px-9"
-              href="#view-pricing"
+              href="/services"
             >
               View Pricing
             </a>

@@ -18,7 +18,7 @@ const Section4 = () => {
   const mapEmbedUrl = `https://www.google.com/maps?q=${businessLocation.lat},${businessLocation.lng}&hl=en&z=15&output=embed`;
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
+    <section id="section4" className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
       {/* Decorative Elements */}
       <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#d7e6d4]/30 blur-3xl" />
       <div className="absolute bottom-20 right-0 h-72 w-72 rounded-full bg-[#d7e6d4]/20 blur-3xl" />
