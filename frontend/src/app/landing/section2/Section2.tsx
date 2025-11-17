@@ -1,4 +1,4 @@
-import { Sparkles, Shirt, Wind, Clock } from 'lucide-react';
+import { Sparkles, Shirt, Wind, Clock, Baby } from 'lucide-react'; // Added Baby icon
 
 const Section2 = () => {
   const services = [
@@ -25,6 +25,12 @@ const Section2 = () => {
       title: "Iron & Fold",
       description: "Professional ironing and neat folding service to keep your clothes crisp and organized.",
       features: ["Expert pressing", "Neat folding", "Hanger service"]
+    },
+    {
+      icon: Baby,
+      title: "Baby Care Washing",
+      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles.",
+      features: ["Hypoallergenic wash", "Gentle care", "We do it with special care"]
     }
   ];
 

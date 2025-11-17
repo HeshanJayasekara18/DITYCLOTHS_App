@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle } from 'lucide-react';
+import { Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle, Baby } from 'lucide-react'; // Added Baby icon
 import Navbar from '@/app/common/Navbar';
 
 
@@ -54,6 +54,17 @@ const ServicesPage = () => {
         "Suitable for formal wear",
         "Hanger service available",
         "Additional charges apply"
+      ],
+      included: false
+    },
+    {
+      icon: Baby,
+      title: "Baby Care Washing",
+      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles.",
+      features: [
+        "Hypoallergenic wash",
+        "Gentle care",
+        "We do it with special care"
       ],
       included: false
     }
