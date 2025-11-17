@@ -1,18 +1,18 @@
-import { Sparkles, Shirt, Wind, Clock, Baby } from 'lucide-react'; // Added Baby icon
+import { Sparkles, Shirt, Wind, Clock, Baby } from 'lucide-react';
 
 const Section2 = () => {
   const services = [
     {
       icon: Sparkles,
-      title: "Premium Wash",
-      description: "Deep cleaning with eco-friendly detergents that preserve fabric quality and colors.",
-      features: ["Stain removal", "Color protection", "Fabric softening"]
+      title: "Premium Wash & Dry",
+      description: "Deep cleaning and professional drying with eco-friendly detergents that preserve fabric quality and colors.",
+      features: ["Stain removal", "Color protection", "Fabric softening", "No shrinkage"]
     },
     {
-      icon: Shirt,
-      title: "Dry Cleaning",
-      description: "Professional dry cleaning for delicate garments and special fabrics.",
-      features: ["Delicate care", "Expert handling", "Quality assurance"]
+      icon: Baby,
+      title: "Baby Care Washing",
+      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles. We do it with special care.",
+      features: ["Hypoallergenic wash", "Gentle care", "Special handling for babies"]
     },
     {
       icon: Wind,
@@ -25,12 +25,6 @@ const Section2 = () => {
       title: "Iron & Fold",
       description: "Professional ironing and neat folding service to keep your clothes crisp and organized.",
       features: ["Expert pressing", "Neat folding", "Hanger service"]
-    },
-    {
-      icon: Baby,
-      title: "Baby Care Washing",
-      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles.",
-      features: ["Hypoallergenic wash", "Gentle care", "We do it with special care"]
     }
   ];
 

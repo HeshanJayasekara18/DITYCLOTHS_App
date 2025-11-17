@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle, Baby } from 'lucide-react'; // Added Baby icon
+import { Sparkles, Shirt, Wind, Clock, Check, Calculator, AlertTriangle, Baby } from 'lucide-react';
 import Navbar from '@/app/common/Navbar';
 
 
@@ -11,27 +11,26 @@ const ServicesPage = () => {
   const services = [
     {
       icon: Sparkles,
-      title: "Premium Wash",
-      description: "Deep cleaning with eco-friendly detergents that preserve fabric quality and colors.",
+      title: "Premium Wash & Dry",
+      description: "Deep cleaning and professional drying with eco-friendly detergents that preserve fabric quality and colors.",
       features: [
         "Stain removal treatment",
         "Color protection process",
         "Fabric softening included",
-        "Gentle care for all fabrics"
+        "No shrinkage guarantee"
       ],
       included: true
     },
     {
-      icon: Wind,
-      title: "Professional Drying",
-      description: "Proper drying techniques to maintain fabric integrity and prevent shrinkage.",
+      icon: Baby,
+      title: "Baby Care Washing",
+      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles. We do it with special care.",
       features: [
-        "Temperature-controlled drying",
-        "No shrinkage guarantee",
-        "Fresh scent",
-        "Quick turnaround time"
+        "Hypoallergenic wash",
+        "Gentle care",
+        "Special handling for babies"
       ],
-      included: true
+      included: false
     },
     {
       icon: Clock,
@@ -53,18 +52,7 @@ const ServicesPage = () => {
         "Expert pressing service",
         "Suitable for formal wear",
         "Hanger service available",
-        "Additional charges apply"
-      ],
-      included: false
-    },
-    {
-      icon: Baby,
-      title: "Baby Care Washing",
-      description: "Specialized washing for baby clothes and fabrics, using hypoallergenic detergents and gentle cycles.",
-      features: [
-        "Hypoallergenic wash",
-        "Gentle care",
-        "We do it with special care"
+        
       ],
       included: false
     }
