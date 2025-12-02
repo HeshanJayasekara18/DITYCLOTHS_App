@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     "laundry midigama",
     "laundry sri lanka",
     "best laundry service",
+    "laundry ahangama",
+    "laundry weligama",
   ],
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
