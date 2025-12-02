@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DIRTYCLOTHS Laundry | Professional Laundry Service",
+  title: "DIRTYCLOTHS Laundry | Professional Laundry Service in Midigama, Ahangama & Weligama",
   description:
-    "DIRTYCLOTHS Laundry offers reliable, affordable, and high-quality laundry services. Clean clothes, fresh feel, trusted service.",
+    "DIRTYCLOTHS Laundry - Professional laundry service in Midigama, Ahangama, and Weligama, Sri Lanka. Reliable, affordable, high-quality laundry services for your clothes.",
   keywords: [
     "DirtyCloths",
     "Laundry Service",
     "Dry Cleaning",
     "Clothes Washing",
     "laundry midigama",
-    "laundry sri lanka",
-    "best laundry service",
     "laundry ahangama",
     "laundry weligama",
+    "laundry sri lanka",
+    "best laundry service",
+    "laundry service near me",
+    "professional laundry midigama",
+    "laundry cleaning ahangama",
+    "laundry cleaning weligama",
   ],
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "DIRTYCLOTHS Laundry | Professional Laundry Service",
-    description: "Reliable, affordable, and high-quality laundry services.",
+    title: "DIRTYCLOTHS Laundry | Midigama, Ahangama & Weligama",
+    description: "Professional laundry services in Midigama, Ahangama & Weligama.",
     type: "website",
     url: "https://dirtyclothslaundry-midigama.netlify.app/",
   },
@@ -40,9 +44,23 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "DIRTYCLOTHS Laundry",
-              description: "Professional laundry service",
+              description: "Professional laundry service in Midigama, Ahangama, and Weligama",
               url: "https://dirtyclothslaundry-midigama.netlify.app/",
               telephone: "+94721634671",
+              areaServed: [
+                {
+                  "@type": "Place",
+                  name: "Midigama"
+                },
+                {
+                  "@type": "Place",
+                  name: "Ahangama"
+                },
+                {
+                  "@type": "Place",
+                  name: "Weligama"
+                }
+              ],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Amuwatta koratuwa",
