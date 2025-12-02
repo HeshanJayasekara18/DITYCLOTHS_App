@@ -5,6 +5,13 @@ import Section4 from "./section4/Section4";
 import Section5 from "./section5/Section5";
 import Footer from "../common/Footerpart";
 
+
+export const metadata = {
+  title: "DIRTYCLOTHS Laundry | Fresh, Clean & Reliable",
+  description:
+    "Experience premium laundry service with DIRTYCLOTHS. Affordable pricing & professional care.",
+};
+
 const Landing = () => {
     return (
         <>
