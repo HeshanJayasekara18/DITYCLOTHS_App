@@ -6,7 +6,7 @@ import Navbar from '@/app/common/Navbar';
 
 const ServicesPage = () => {
   const [weight, setWeight] = useState(1);
-  const pricePerKg = 600;
+  const pricePerKg = 700;
 
   const services = [
     {
@@ -108,7 +108,7 @@ const ServicesPage = () => {
               <div className="p-8 sm:p-12">
                 <div className="mb-8 text-center">
                   <div className="mb-4 flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-[#0f351e] sm:text-6xl">Rs 600</span>
+                    <span className="text-5xl font-bold text-[#0f351e] sm:text-6xl">Rs 700</span>
                     <span className="text-xl text-[#213b2e]">/ kg</span>
                   </div>
                   <p className="text-sm text-[#213b2e] sm:text-base">
