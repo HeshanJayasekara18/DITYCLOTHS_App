@@ -1,13 +1,13 @@
-import Services from "./ServicesPage";
-import Footerpart from "../common/Footerpart";
+import type { Metadata } from 'next';
+import Services from './ServicesPage';
 
-const ServicesPage = () => {
-  return (
-    <>
-    <Services />
-    <Footerpart />
-    </>
-  );
+export const metadata: Metadata = {
+  title: 'Laundry Prices & Services',
+  description:
+    'Wash, sun-dry and fold for Rs 700/kg with no minimum. Ready in 24–48 hours, express within 24 hours at the same price, free ironing on request. Midigama, Sri Lanka.',
+  alternates: { canonical: '/services' },
 };
 
-export default ServicesPage;
+export default function ServicesPage() {
+  return <Services />;
+}

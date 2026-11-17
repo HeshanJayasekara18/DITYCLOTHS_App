@@ -1,11 +1,14 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
-import Navbar from '../common/Navbar';
+import { MapPin, Phone, Mail, Clock, MessageCircle, ArrowUpRight } from 'lucide-react';
+import PageHero from '../common/PageHero';
+import CtaBand from '../common/CtaBand';
+import { images } from '../common/images';
+import { ParallaxImage, Reveal, Stagger, StaggerItem } from '../common/motion';
 
 const contactMethods = [
   {
     icon: Phone,
     title: 'Call Us',
-    description: 'Speak directly with our team between 8.00 AM – 10.00 PM every day.',
+    description: 'Speak directly with our team every day between 6 AM and 12 AM.',
     value: '+94 72 1634 671',
     href: 'tel:+94721634671',
     external: false
@@ -13,7 +16,7 @@ const contactMethods = [
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    description: 'Send a quick message on WhatsApp and we will reply promptly.',
+    description: 'Send a quick message on WhatsApp. We reply every day between 6 AM and 12 AM.',
     value: '+94 72 1634 671',
     href: 'https://wa.me/94721634671',
     external: true
@@ -37,7 +40,7 @@ const visitHighlights = [
   {
     icon: Clock,
     title: 'Open Hours',
-    detail: 'Always open'
+    detail: 'Every day, 6 AM – 12 AM'
   },
   {
     icon: Phone,
@@ -48,139 +51,94 @@ const visitHighlights = [
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-white text-[#0f2716]">
-      <section className="relative isolate overflow-hidden bg-[#d7e6d4]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.6),transparent_55%)]" />
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pb-16 pt-5 sm:gap-12 sm:px-6 sm:pb-20 lg:gap-16 lg:px-10 lg:pb-24">
-          <Navbar />
-          <div className="flex flex-col items-center gap-6 text-center sm:gap-8">
-            <div className="flex flex-col gap-4">
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.55em] text-[#1b3f26] sm:text-[0.7rem] sm:tracking-[0.65em]">
-                Get In Touch
-              </span>
-              <h1 className="text-3xl font-semibold leading-tight tracking-[0.06em] text-[#06150b] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl">
-                Contact DIRTYCLOTHS Laundry
-              </h1>
-              <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#213b2e] sm:text-base lg:text-lg">
-                We love hearing from travelers and locals alike. Reach out, schedule a drop-off, or ask anything about our eco-friendly laundry services in Midigama.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="bg-sand text-forest-900">
+      <PageHero
+        eyebrow="Get In Touch"
+        title="Contact DIRTYCLOTHS Laundry"
+        description="We love hearing from travelers and surfers. Reach out, plan your drop-off, or ask anything about our sun-dried laundry service in Midigama."
+        image={images.pageContact}
+      />
 
-      <section className="py-16 sm:py-20 lg:py-28">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method) => {
               const Icon = method.icon;
               return (
-                <div
-                  key={method.title}
-                  className="flex flex-col gap-4 rounded-3xl border border-[#0f2716]/10 bg-gradient-to-br from-[#d7e6d4]/40 to-white p-6 shadow-[0_18px_46px_rgba(11,34,20,0.12)] transition hover:shadow-[0_22px_60px_rgba(11,34,20,0.18)] sm:p-8"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0f351e] text-white">
-                    <Icon size={24} />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-xl font-semibold text-[#06150b]">
-                      {method.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-[#213b2e]/80">
-                      {method.description}
-                    </p>
-                  </div>
+                <StaggerItem key={method.title} className="h-full">
                   <a
-                    className="inline-flex w-fit items-center justify-center rounded-full border border-[#0f351e]/30 bg-white px-5 py-2 text-sm font-semibold text-[#0f351e] shadow-[0_12px_30px_rgba(255,255,255,0.6)] transition hover:bg-[#f3f7f0]"
                     href={method.href}
                     target={method.external ? '_blank' : undefined}
                     rel={method.external ? 'noopener noreferrer' : undefined}
+                    className="group flex h-full flex-col gap-5 rounded-[2rem] bg-white p-7 shadow-soft ring-1 ring-forest-900/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-lift sm:p-8"
                   >
-                    {method.value}
+                    <div className="flex items-center justify-between">
+                      <span className="grid h-14 w-14 place-items-center rounded-2xl bg-mint-200 text-forest-800 transition-all duration-500 group-hover:bg-forest-800 group-hover:text-white">
+                        <Icon size={24} />
+                      </span>
+                      <ArrowUpRight className="text-moss/40 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-leaf-600" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <h3 className="font-display text-xl font-bold text-ink">{method.title}</h3>
+                      <p className="text-sm leading-relaxed text-moss/80">{method.description}</p>
+                    </div>
+                    <span className="mt-auto break-all font-semibold text-forest-800">{method.value}</span>
                   </a>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="flex flex-col gap-6 rounded-3xl border border-[#0f2716]/10 bg-white/90 p-8 shadow-[0_20px_60px_rgba(11,34,20,0.12)] backdrop-blur-sm sm:p-12">
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <Reveal className="relative isolate flex flex-col gap-6 overflow-hidden rounded-[2rem] bg-forest-800 p-8 text-white shadow-lift sm:p-12" x={-30} y={0}>
+              <ParallaxImage src={images.visitBg} alt="" sizes="(max-width: 1024px) 100vw, 45vw" className="-z-20" strength={14} />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-forest-900/90 via-forest-800/85 to-forest-900/75" />
               <div className="flex flex-col gap-3">
-                <h2 className="text-2xl font-semibold text-[#06150b] sm:text-3xl">
-                  Plan Your Visit
-                </h2>
-                <p className="text-sm leading-relaxed text-[#213b2e] sm:text-base">
+                <h2 className="font-display text-3xl font-bold">Plan Your Visit</h2>
+                <p className="text-sm leading-relaxed text-white/75 sm:text-base">
                   Drop off your laundry at our Midigama shop and enjoy the beach while we handle the rest. We are set up for travelers, surfers, and long-stay guests who need reliable turnaround times.
                 </p>
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {visitHighlights.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <div key={item.title} className="flex items-start gap-4 rounded-2xl border border-[#0f2716]/10 bg-[#d7e6d4]/40 p-4">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0f351e] text-white">
-                        <Icon size={22} />
-                      </div>
+                    <div key={item.title} className="flex items-start gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-sun text-forest-900">
+                        <Icon size={20} />
+                      </span>
                       <div className="flex flex-col">
-                        <span className="text-sm font-semibold text-[#06150b]">
-                          {item.title}
-                        </span>
-                        <span className="text-sm text-[#213b2e]">
-                          {item.detail}
-                        </span>
+                        <span className="text-sm font-semibold">{item.title}</span>
+                        <span className="text-sm text-white/70">{item.detail}</span>
                       </div>
                     </div>
                   );
                 })}
               </div>
-            </div>
-            <div className="relative overflow-hidden rounded-3xl border border-[#0f2716]/10 shadow-[0_20px_60px_rgba(11,34,20,0.15)]">
+            </Reveal>
+            <Reveal x={30} y={0} className="relative overflow-hidden rounded-[2rem] border-[6px] border-white shadow-lift">
               <iframe
                 src="https://www.google.com/maps?q=5.96545,80.39445&hl=en&z=15&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '420px' }}
+                style={{ border: 0, minHeight: '440px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="DIRTYCLOTHS Laundry Location"
-                className="rounded-3xl"
+                className="block"
               />
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#d7e6d4] py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-10">
-          <div className="flex flex-col gap-6 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-[0_20px_60px_rgba(11,34,20,0.15)] backdrop-blur-sm sm:p-12">
-            <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-semibold text-[#06150b] sm:text-3xl">
-                Need Immediate Assistance?
-              </h2>
-              <p className="mx-auto max-w-xl text-sm text-[#213b2e] sm:text-base">
-                We are just a call or message away if you have urgent laundry requirements, group bookings, or special fabric care needs.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a
-                className="inline-flex items-center justify-center rounded-full bg-[#0f351e] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_22px_48px_rgba(15,53,30,0.32)] transition hover:bg-[#0c2815]"
-                href="tel:+94721634671"
-              >
-                Call Now
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-[#0f351e]/30 bg-white px-8 py-3.5 text-sm font-semibold text-[#0f351e] shadow-[0_18px_40px_rgba(255,255,255,0.55)] transition hover:bg-[#f3f7f0]"
-                href="https://wa.me/94721634671"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Chat on WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaBand
+        title="Need Immediate Assistance?"
+        description="We are just a call or message away if you have urgent laundry requirements, group bookings, or special fabric care needs."
+        primary={{ label: "Chat on WhatsApp", href: "https://wa.me/94721634671" }}
+        secondary={{ label: "Call Now", href: "tel:+94721634671" }}
+      />
     </div>
   );
 };
